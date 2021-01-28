@@ -36,8 +36,15 @@ public class TestRepositoryImplementation implements TestRepository{
         return "success";
     }
 
-    @Override
+    @Transactional
     public String deleteTest(int id) {
-        return null;
+        try {
+            Test test = entityManager.find(Test.class,id);
+            entityManager.remove(test);
+            return "Success";
+        }
+        catch (Exception e){
+            return "fail";
+        }
     }
 }

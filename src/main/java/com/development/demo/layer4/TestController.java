@@ -43,4 +43,10 @@ public class TestController {
             return "fail";
         }
     }
+    @DeleteMapping(value = "/deleteTest/{id}")
+    @ResponseBody
+    @CrossOrigin
+    public String deleteTest(@PathVariable int id){
+            return testService.deleteTestService(id);
+    }
 }

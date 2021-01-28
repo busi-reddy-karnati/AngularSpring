@@ -38,6 +38,7 @@ public class TestServiceImplementation implements TestService{
 
     @Override
     public String deleteTestService(int id) {
+        testRepository.deleteTest(id);
         return null;
     }
 }
