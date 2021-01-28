@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface TestRepository {
     List<Test> getAllTests();
-    List<Test> getTest(int id);
+    Test getTest(int id);
     void addTest(Test test);
     String updateTest(Test test);
     String deleteTest(int id);

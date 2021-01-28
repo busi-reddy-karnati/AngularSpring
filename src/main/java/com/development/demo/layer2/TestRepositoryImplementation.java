@@ -21,8 +21,11 @@ public class TestRepositoryImplementation implements TestRepository{
     }
 
     @Override
-    public List<Test> getTest(int id) {
-        return null;
+    public Test getTest(int id) {
+
+        String queryString = "select t from Test t where t.id ="+id;
+        List<Test> testList = entityManager.createQuery(queryString).getResultList();
+        return testList.get(0);
     }
 
     @Transactional//Adding this is important for persist

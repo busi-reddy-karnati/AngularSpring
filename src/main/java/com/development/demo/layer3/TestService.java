@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface TestService {
     List<Test> getAllTestsService();
-    List<Test> getTestService(int id);
+    Test getTestService(int id);
     String updateTestService(Test test);
     void addTestService(Test test);
     String deleteTestService(int id);

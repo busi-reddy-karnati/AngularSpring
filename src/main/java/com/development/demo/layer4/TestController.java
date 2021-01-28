@@ -5,6 +5,7 @@ import com.development.demo.layer3.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.ws.rs.GET;
 import java.util.List;
 
 @RestController
@@ -19,7 +20,6 @@ public class TestController {
         List<Test> testList = (List<Test>) testService.getAllTestsService();
         return testList;
     }
-
     @PostMapping(path = "/addTest")
     @ResponseBody
     @CrossOrigin

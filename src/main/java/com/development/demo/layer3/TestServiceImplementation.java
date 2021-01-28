@@ -16,8 +16,9 @@ public class TestServiceImplementation implements TestService{
     }
 
     @Override
-    public List<Test> getTestService(int id) {
-        return null;
+    public Test getTestService(int id) {
+
+        return testRepository.getTest(id);
     }
 
     @Override
