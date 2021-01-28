@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.transaction.Transactional;
 import java.util.List;
 @Repository
 public class TestRepositoryImplementation implements TestRepository{
@@ -24,9 +25,9 @@ public class TestRepositoryImplementation implements TestRepository{
         return null;
     }
 
-    @Override
-    public String addTest(Test test) {
-        return null;
+    @Transactional//Adding this is important for persist
+    public void addTest(Test test) {
+        entityManager.persist(test);
     }
 
     @Override

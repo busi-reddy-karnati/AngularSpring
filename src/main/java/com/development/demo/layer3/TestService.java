@@ -8,6 +8,6 @@ public interface TestService {
     List<Test> getAllTestsService();
     List<Test> getTestService(int id);
     String updateTestService(Test test);
-    String addTestService(Test test);
+    void addTestService(Test test);
     String deleteTestService(int id);
 }

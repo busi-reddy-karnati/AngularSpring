@@ -26,8 +26,8 @@ public class TestServiceImplementation implements TestService{
     }
 
     @Override
-    public String addTestService(Test test) {
-        return null;
+    public void addTestService(Test test) {
+        testRepository.addTest(test);
     }
 
     @Override
