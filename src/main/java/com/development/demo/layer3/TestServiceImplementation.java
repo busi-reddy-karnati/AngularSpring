@@ -3,9 +3,10 @@ package com.development.demo.layer3;
 import com.development.demo.layer1.Test;
 import com.development.demo.layer2.TestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class TestServiceImplementation implements TestService{
     @Autowired
     TestRepository testRepository;
