@@ -22,7 +22,13 @@ public class TestServiceImplementation implements TestService{
 
     @Override
     public String updateTestService(Test test) {
-        return null;
+        try{
+            return testRepository.updateTest(test);
+        }
+        catch(Exception e){
+            return "fail";
+        }
+
     }
 
     @Override

@@ -32,4 +32,15 @@ public class TestController {
             return "fail";
         }
     }
+    @PostMapping(path = "/updateTest")
+    @ResponseBody
+    @CrossOrigin
+    public String updateTest(@RequestBody Test test){
+        try{
+            return testService.updateTestService(test);
+        }
+        catch(Exception e){
+            return "fail";
+        }
+    }
 }

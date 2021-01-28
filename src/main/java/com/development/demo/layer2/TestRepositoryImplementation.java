@@ -30,9 +30,10 @@ public class TestRepositoryImplementation implements TestRepository{
         entityManager.persist(test);
     }
 
-    @Override
+    @Transactional
     public String updateTest(Test test) {
-        return null;
+        entityManager.merge(test);
+        return "success";
     }
 
     @Override
