@@ -13,7 +13,8 @@ public class TestRepositoryImplementation implements TestRepository{
     @Override
     public List<Test> getAllTests() {
         Query query = entityManager.createQuery("from test");
-        List<Test> testList = query.getResultList();
+        List<Test> testList;
+        testList = query.getResultList();
         return testList;
     }
 
